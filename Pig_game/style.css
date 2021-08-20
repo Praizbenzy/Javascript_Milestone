@@ -32,7 +32,7 @@ h1{
     font-weight: 100; 
 }
 .thresh-score{
-    color: #5f27cd;
+    color:  #b40e88;
     font-size: 25px;
     margin-top: 15px;
     position: absolute;
@@ -66,14 +66,14 @@ input[type=number]::-webkit-outer-spin-button {
     padding: 100px;
 }
 
-.input-value:focus{ border-color: #5f27cd; }
+.input-value:focus{ border-color:  #b40e88; }
 .input-value::placeholder{font-size: 13px; font-weight: 300;}
 .input-value{
     font-family: Lato;
     text-align: center;
     font-weight: 700;
     width: 200px;
-    color: #5f27cd;
+    color:  #b40e88;
     height: 30px;
     font-size: 15px;
     position: absolute;
@@ -84,9 +84,6 @@ input[type=number]::-webkit-outer-spin-button {
     border-bottom: 1px solid #555;
 }   
 
-/**********************************************
-*** PLAYERS
-**********************************************/
 
 .player-name {
     font-size: 40px;
@@ -101,7 +98,7 @@ input[type=number]::-webkit-outer-spin-button {
 .player-score {
     font-size: 80px;
     font-weight: 100;
-    color: #5f27cd;
+    color:  #b40e88;
     margin-bottom: 130px;
 }
 
@@ -109,16 +106,18 @@ input[type=number]::-webkit-outer-spin-button {
 .active .player-name { font-weight: 300; }
 
 .active .player-name::after {
-    content: "\2022";
     font-size: 47px;
     position: absolute;
-    color: #5f27cd;
+    color: #b40e88  ;
     top: -7px;
     left: 10px;
 }
 
 .player-current-box {
-    background-color: #5f27cd;
+    background: linear-gradient(
+        #b40e88,
+        #fc2d61
+    ) ;
     border-radius: 10px;
     color: #fff;
     width: 50%;
@@ -166,7 +165,7 @@ button:focus,
 }
 
 i {
-    color: #5f27cd;
+    color: #111111;
     display: inline-block;
     margin-right: 15px;
     font-size: 32px;
@@ -176,10 +175,31 @@ i {
     transition: margin 0.3s;
 }
 
-.btn-new { left:19%; top: 70px;}
+.btn-new { 
+    left:25%; 
+    top: 70px;
+    background-color:  #b40e88;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    height: 35px;
+    width: 150px;
+    border-radius: 15px;
+}
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
-.btn-set-value{left: 90%; top: 70px;}
+
+.btn-set-value{
+    left: 87%; 
+    top: 70px;
+    background-color:  #b40e88;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    height: 35px;
+    width: 150px;
+    border-radius: 15px;
+}
 
 .dice {
     position: absolute;
