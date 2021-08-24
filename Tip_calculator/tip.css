@@ -1,14 +1,36 @@
 
 
 body{
-    background-color: gainsboro;
-    background: linear-gradient(135deg, #541ae5,#9682e0,#bcb0eb,#d4ccf2) fixed;
-    background-size: 100% 50%;
-    background-repeat: no-repeat;
-    height: 100%;
-    margin: 0;
-    font-family: arial, sans-serif;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient( #25814b,  #60c404);
 }
+
+body::before{
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( #f00, #ff0);
+    clip-path: circle(30% at right 75%);
+}
+
+body::after{
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( #f00, #ff0, #ffffff);
+    clip-path: circle(20% at 10% 10%);
+}
+
 section{
     display: flex;
     justify-content: center;
@@ -18,12 +40,16 @@ section{
 #container {
     height: 500px;
     width: 450px;
-    background-color: #bcb0eb;
-    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 25px;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
 }
 
 #container .tip_area{
@@ -33,7 +59,7 @@ section{
     width: 360px;
     height: 430px;
     border-radius: 25px;
-    border: 2px solid;
+    border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .wrapper{
@@ -43,10 +69,16 @@ section{
     margin: 10px 0;
 }
 
+label{
+    font-size: 15px;
+    font-weight: bold;
+}
+
 .val {
     font-weight: 600;
     font-size: 15px;
     width: 150px;
+    height: 30px;
     background-color: gainsboro;
     border: none;
     outline: none;
@@ -59,8 +91,10 @@ hr{
     border-bottom: 1px solid #ffffff;
 }
 .tip_header{
-    font-weight: 600;
-    font-style: italic;
+    font-size: 2em;
+    font-family: 'Rampart One', cursive;
+    color:  rgba(255, 255, 255, 5);
+    pointer-events: none;
 }
 
 
@@ -73,11 +107,21 @@ hr{
 .result_space{
     display: flex;
     align-content: space-between;
-    
+    margin-top: 30px;
+    padding: 10px;
+    width: 350px;
+    border-radius: 5px;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1); 
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .input_result{ 
     background-color: transparent;
+    border: none;
+    margin-top: 10px;
+    font-size: 18px;
 }
 
 .button_cal{
@@ -86,11 +130,13 @@ hr{
 }
 
 .btn{
-    width: 75px;
-    height: 25px;
+    width: 100px;
+    height: 40px;
     border-radius: 5px;
-    margin-top: 65px;
-    padding: 0;
+    margin-top: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000000;
        
 }
 
